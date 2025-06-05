@@ -15,6 +15,8 @@
 
 [Simulador](https://8bitworkshop.com/v3.9.0/?platform=verilog&file=clock_divider.v)<br>
 
+<h2>Programas de simulacion</h2>
+[ModelSim](https://www.intel.com/content/www/us/en/software-kit/750368/modelsim-intel-fpgas-standard-edition-software-version-18-1.html)<br>
 
 
 
