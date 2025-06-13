@@ -2,7 +2,7 @@ module decodi4x6(A,Y);
   input [3:0]A;
   output reg [5:0]Y;
   
-  always @(*)
+  always @(A)
     begin
       if (A == 4'd0) Y = 15;
       else if (A == 4'd1) Y = 14;
