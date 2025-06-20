@@ -8,7 +8,7 @@ Este ejercicio es útil para familiarizarse con la implementación de sistemas m
 
 A continuación se muestra un diagrama que explica cómo se realiza la conexión entre los módulos:
 
-![Diagrama de conexión](./be2a5370-b873-4f4b-8921-650a823c793a.png)
+![](https://github.com/Cosmo125/Microprocesadores_fpga/blob/main/MultiModulos/Captura%20de%20pantalla%202025-06-20%20161632.png)
 
 ## Descripción del código
 
