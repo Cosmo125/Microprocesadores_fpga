@@ -30,21 +30,22 @@ La **Tang Nano 9K** es una FPGA de bajo costo que ofrece una frecuencia de entra
 module divi(CLK_IN, CLK_OUT, rst);
 input CLK_IN, rst;
 output reg CLK_OUT;
+wire rest;
+assign rest  = ~rst;
+reg [23:0]contador;
 
-reg [23:0] contador;
-
-always @(posedge CLK_IN or posedge rst)
+always @(posedge CLK_IN or posedge rest)
 begin 
-    if (rst) begin
-        CLK_OUT <= 0;
-        contador <= 0;
-    end else if (contador == 13500000 - 1) begin
-        CLK_OUT <= ~CLK_OUT;
-        contador <= 0;
-    end else
-        contador <= contador + 1;
+	if(rest) begin
+	CLK_OUT <= 0;
+	contador <= 0;
+	end else if (contador == 13500000-1) begin
+	CLK_OUT <= ~CLK_OUT;
+	contador <= 0;
+	end else
+	contador <= contador + 1;
 end
-endmodule
+endmodule 
 ```
 
 - `CLK_IN`: Señal de reloj de entrada (27 MHz).
