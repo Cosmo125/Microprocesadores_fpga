@@ -23,12 +23,13 @@
 module divi(CLK_IN, CLK_OUT, rst);
 input CLK_IN, rst;
 output reg CLK_OUT;
-
+wire rest;
+assign rest  = ~rst;
 reg [23:0]contador;
 
-always @(posedge CLK_IN or posedge rst)
+always @(posedge CLK_IN or posedge rest)
 begin 
-	if(rst) begin
+	if(rest) begin
 	CLK_OUT <= 0;
 	contador <= 0;
 	end else if (contador == 13500000-1) begin
