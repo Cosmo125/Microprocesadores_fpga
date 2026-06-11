@@ -1,6 +1,6 @@
 module mux2x1(A,B,sell,out);
 	input [3:0]A,B;
-	inout sell;
+	input sell;
 	output reg [3:0]out;
 	
 always @(*)
