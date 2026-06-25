@@ -9,7 +9,7 @@ begin
 	if(rst) begin
 	CLK_OUT <= 0;
 	contador <= 0;
-	end else if (contador == 1349999) begin
+	end else if (contador == 13500000 - 1) begin
 	CLK_OUT <= ~CLK_OUT;
 	contador <= 0;
 	end else
